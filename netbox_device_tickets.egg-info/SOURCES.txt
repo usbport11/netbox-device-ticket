@@ -1,0 +1,15 @@
+README.md
+setup.py
+netbox_device_tickets/__init__.py
+netbox_device_tickets/forms.py
+netbox_device_tickets/models.py
+netbox_device_tickets/tables.py
+netbox_device_tickets/urls.py
+netbox_device_tickets/views.py
+netbox_device_tickets.egg-info/PKG-INFO
+netbox_device_tickets.egg-info/SOURCES.txt
+netbox_device_tickets.egg-info/dependency_links.txt
+netbox_device_tickets.egg-info/not-zip-safe
+netbox_device_tickets.egg-info/top_level.txt
+netbox_device_tickets/migrations/0001_initial.py
+netbox_device_tickets/migrations/__init__.py
