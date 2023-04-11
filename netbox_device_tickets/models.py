@@ -18,19 +18,39 @@ class DeviceTicketStatusTypeChoices(ChoiceSet):
 class DeviceTicket(NetBoxModel):
     name = models.CharField(
         max_length=100,
+        verbose_name="Ticket Id",
     )
-    summary = models.CharField(
+    description = models.CharField(
         max_length=200,
+        verbose_name="Short description",
     )
     status = models.CharField(
         max_length=30,
-        choices=DeviceTicketStatusTypeChoices
+        choices=DeviceTicketStatusTypeChoices,
     )
     device = models.ForeignKey(
         to='dcim.Device',
         on_delete=models.CASCADE,
         related_name='+',
         default=None
+    )
+    creator = models.CharField(
+        max_length=100,
+        null=True,
+        blank=True,
+    )
+    executor = models.CharField(
+        max_length=100,
+        null=True,
+        blank=True,
+    )
+    start = models.DateTimeField(
+        max_length=100,
+    )
+    end = models.DateTimeField(
+        max_length=100,
+        null=True,
+        blank=True,
     )
     comments = models.TextField(
         blank=True

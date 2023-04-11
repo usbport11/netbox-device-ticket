@@ -17,7 +17,7 @@ class NestedDeviceTicketSerializer(WritableNestedSerializer):
 
     class Meta:
         model = DeviceTicket
-        fields = ('id', 'url', 'name', 'status', 'device', 'created', 'last_updated',)
+        fields = ('id', 'url', 'display', 'name')
 #
 # Regular serializers
 #
@@ -32,6 +32,6 @@ class DeviceTicketSerializer(NetBoxModelSerializer):
     class Meta:
         model = DeviceTicket
         fields = (
-            'id', 'url', 'display', 'name', 'summary', 'status', 'device', 'comments', 'tags', 'custom_fields', 
+            'id', 'url', 'display', 'name', 'description', 'status', 'device', 'creator', 'executor', 'start', 'end', 'comments', 'tags', 'custom_fields', 
             'created', 'last_updated',
         )

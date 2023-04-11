@@ -10,5 +10,5 @@ class DeviceTicketTable(NetBoxTable):
 
     class Meta(NetBoxTable.Meta):
         model = DeviceTicket
-        fields = ('pk', 'id', 'name', 'device', 'summay', 'status', 'actions')
-        default_columns = ('name', 'device', 'summary', 'status', 'actions')
+        fields = ('pk', 'id', 'name', 'device', 'description', 'status', 'creator', 'executor', 'start', 'end', 'actions')
+        default_columns = ('name', 'device', 'description', 'status', 'creator', 'executor', 'start', 'end', 'actions')

@@ -4,6 +4,6 @@ from . import views
 app_name = 'netbox_device_tickets'
 
 router = NetBoxRouter()
-router.register('deviceticket', views.DeviceTicketViewSet)
+router.register('device-tickets', views.DeviceTicketViewSet)
 
 urlpatterns = router.urls
